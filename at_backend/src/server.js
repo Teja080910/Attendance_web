@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.json())
 app.get('/',(req,res)=>{
     res.send("server is running successfully!");
-});+
+});
 // app.get('/inter',(req,res)=>{
 //     const data=db.collection('signup').insertOne({name:"sanju"});
 //     res.json(data);
