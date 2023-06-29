@@ -70,7 +70,7 @@ const Register=()=>{
         <tr>
         <th>Email</th>
         <td colspan="4"><input type="email"  id="email" placeholder="G-mail"  name="email" onChange={(e)=>SetEmail(e.target.value)}/></td></tr><br/>
-        <tr>
+       <tr>
         <th>Mobile Number</th>
         <td colspan="4"><input type="number" id="phno" name="phno" placeholder="Phone number"  onChange={(e)=>SetPhno(e.target.value)}/></td></tr><br/>
         <tr>
