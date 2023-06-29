@@ -2,10 +2,10 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 const Log=()=>
 {
-    // const nav=useNavigate();
+    const nav=useNavigate();
     const Sturegi=async()=>
     {
-        // nav("/studentregister");
+         nav("/register");
     }
     return(
         <>
