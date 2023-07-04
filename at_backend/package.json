@@ -1,20 +1,21 @@
 {
   "name": "at_backend",
   "version": "1.0.0",
-  "description": "attendence_web backend",
-  "main": "index.js",
+  "type":"module",
+  "description": "",
+  "main": "db.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
   },
-  "author": "teja",
+  "author": "sanju" ,
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "ejs": "^3.1.9",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mongodb": "^5.6.0",
-    "mongoose": "^7.2.3",
-    "nodemon": "^2.0.22",
-    "react": "^18.2.0"
+    "mongodb": "^5.3.0",
+    "mongoose": "^7.1.0",
+    "nodemon": "^2.0.22"
   }
 }
