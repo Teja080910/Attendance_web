@@ -12,9 +12,9 @@ const Register=()=>{
     const[email,SetEmail]=useState("");
     const[phno,SetPhno]=useState("");
     const handleclick =async()=>{
-        const  responce = await axios.get("http://localhost:6000/check/"+name);
-        const  responce1 = await axios.get("http://localhost:6000/check1/"+email);
-        const  responce2 = await axios.get("http://localhost:6000/check2/"+phno);
+        const  responce = await axios.get("http://localhost:8000/check/"+name);
+        const  responce1 = await axios.get("http://localhost:8000/check1/"+email);
+        const  responce2 = await axios.get("http://localhost:8000/check2/"+phno);
         if(responce.data)
         {
             SetCheck("User Name is already exists");
@@ -29,7 +29,7 @@ const Register=()=>{
         }
         else
         {
-        const  responce3 = await axios.post("http://localhost:6000/signup/"+name+"/"+regd+"/"+year+"/"+section+"/"+email+"/"+phno);
+        const  responce3 = await axios.post("http://localhost:8000/signup/"+name+"/"+regd+"/"+year+"/"+section+"/"+email+"/"+phno);
         alert("register successfully");
         nav('/')
         }
