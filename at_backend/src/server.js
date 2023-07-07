@@ -28,7 +28,7 @@ app.get('/check2/:phno',async(req,res)=>{
     res.json(details);
 })
 connectToDB(()=>{
-    app.listen(8000,()=>{
-        console.log("Server Running At port 8000");
+    app.listen(4000,()=>{
+        console.log("Server Running At port 4000");
     })
 })
