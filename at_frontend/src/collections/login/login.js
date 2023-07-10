@@ -7,6 +7,10 @@ const Log=()=>
     {
          nav("/register");
     }
+    const libbooks=async()=>
+    {
+        nav("/screen");
+    }
     return(
         <>
         <div className="log">
@@ -14,7 +18,7 @@ const Log=()=>
             <div className="logclgdept">DEPARTMENT OF CSE</div>
             <div>
                 <button className="libent" onClick={Sturegi}><b>Student register</b></button>
-                <button className="libent"><b>Library books</b></button>
+                <button className="libent" onClick={libbooks}><b>Library books</b></button>
             </div>
         </div>
         </>
