@@ -26,7 +26,8 @@ const Bookreg= () => {
    
     return(
         <>
-        <table align="center" className="table">
+        <br/>
+        <table align="center">
             <tr>
                 <th>Register Number</th>
                 <td><input className="input1" type="text" id="regd1" name="regd1" onChange={(e)=>setregd(e.target.value)} ></input></td>

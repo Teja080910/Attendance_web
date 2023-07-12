@@ -79,15 +79,12 @@
 }
 .screen
 {
-  width:50%;
+  width:100%;
   
-}
-.space{
-  display: flex;
 }
 .color{
   width: 10%;
-  background-color: aqua;
+  background-color: #00ffff;
 }
 .table{
   height:40vh;
