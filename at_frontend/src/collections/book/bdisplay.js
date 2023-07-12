@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
-const regd=localStorage.regd;
 const Bdisplay= () => {
     const[data,setData]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:8000/screen/'+regd)
+        axios.get('http://localhost:4000/screen/')
         .then((responce)=>{   
             setData(responce.data);
         })
@@ -16,16 +15,20 @@ const Bdisplay= () => {
         <>
         {
             data.map((item)=>{ 
-                <>
-                <div>
-               <h3>{item.bname}</h3>
-               <h3>{item.code}</h3>
-               <h3>{item.duration}</h3>
-               <h3>{item.pdate}</h3>
-               <h3>{item.ldate}</h3>
-               </div>
-               <br/>
-               </>
+                return(
+               <>
+                    <table className="table1">
+                    <tr>
+                    <td>{item.regd}</td>
+                    <td>{item.bname}</td>
+                     <td>{item.code}</td>
+                     <td>{item.date}</td>
+                    <td >{item.time}</td>
+                    </tr>
+                    <br/>
+                    </table>
+                </>
+                )
             })
         }
         </>

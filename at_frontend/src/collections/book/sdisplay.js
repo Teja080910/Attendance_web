@@ -17,10 +17,16 @@ const Sdisplay= () => {
         <>
         {
             data.map((item)=>{ 
-                <div>
-                    <h4>{item.name}</h4>
-                    <h4>{item.caste}</h4>
-                </div>
+                <table className="table1">
+                    <tr>
+                    <td>{item.regd}</td>
+                    <td>{item.bname}</td>
+                     <td>{item.code}</td>
+                     <td>{item.date}</td>
+                    <td >{item.time}</td>
+                    </tr>
+                    <br/>
+                    </table>
             })
         }
         </>

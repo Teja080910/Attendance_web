@@ -8,9 +8,9 @@ const Screen =()=>{
     return(
         <>
         <Header/>
-        <Book/>
+        <br/>
         <div  className="space">
-        <div className="screen"><Sdisplay/><br/><Bookreg/></div>
+        <div className="screen"><Bookreg/></div>
         <div className="screen"><Bdisplay/></div>
         </div>
         </>

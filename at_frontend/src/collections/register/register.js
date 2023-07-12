@@ -10,7 +10,6 @@ const Register=()=>{
     const[regd,SetRegd]=useState("");
     const[year,SetYear]=useState("");
     const[section,SetSection]=useState("");
-    const[caste,setcaste]=useState("");
     const[email,SetEmail]=useState("");
     const[phno,SetPhno]=useState("");
     const handleclick =async()=>{
@@ -26,7 +25,7 @@ const Register=()=>{
         }
         else
         {
-        const  responce3 = await axios.post("http://localhost:4000/signup/"+name+"/"+regd+"/"+year+"/"+section+"/"+caste+"/"+email+"/"+phno);
+        const  responce3 = await axios.post("http://localhost:4000/signup/"+name+"/"+regd+"/"+year+"/"+section+"/"+email+"/"+phno);
         alert("register successfully");
         nav('/')
         }
@@ -64,12 +63,6 @@ const Register=()=>{
        <td> <input type="radio" id="C"  name="section" onChange={(e)=>SetSection('C')}/><label for="C">C</label></td>
         <td><input type="radio" id="D"  name="section" onChange={(e)=>SetSection('D')}/><label for="D">D</label></td>
         <td><input type="radio" id="E"  name="section" onChange={(e)=>SetSection('E')}/><label for="E">E</label></td>
-        </tr><br/>
-        <tr rowSpan="10">
-        <th>caste</th>
-        <td><input type="radio" id="sc"  name="caste" onChange={(e)=>setcaste('SC')}/><label for="sc">sc</label></td>
-        <td><input type="radio" id="st"  name="caste" onChange={(e)=>setcaste('ST')}/><label for="st">st</label></td>
-        <td><input type="radio" id="others"  name="caste" onChange={(e)=>setcaste('Others')}/><label for="others">others</label></td>
         </tr><br/>
         <tr rowSpan="10">
         <th>Email</th>

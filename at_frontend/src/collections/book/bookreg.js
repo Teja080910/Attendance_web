@@ -1,41 +1,50 @@
 import React, { useEffect, useState } from "react";
+import Datetime from "react-datetime";
 import axios from "axios"; 
 const Bookreg= () => {
-    const regd=localStorage.regd;
+
+    const[regd,setregd]=useState([]);
     const[bname,setbname]=useState([]);
-    const[duration,setduration]=useState([]);
+    // const[duration,setduration]=useState([]);
     const[code,setcode]=useState([]);
-    const[pdate,setpdate]=useState([]);
-    const[ldate,setldate]=useState([]);
+    const[date1,setdate]=useState([]);
+    // const[ldate,setldate]=useState([]);
+    const date = new Date();
+    const showTime = date.getHours()
+        + ':' + date.getMinutes()
+        + ":" + date.getSeconds();
     const enter=async()=>{
-        const data=await axios.post("http://localhost:4000/enter/"+regd+"/"+bname+"/"+code+"/"+duration+"/"+pdate+"/"+ldate);
+        try{
+        const data=await axios.post("http://localhost:4000/enter/"+regd+"/"+bname+"/"+code+"/"+date1+"/"+showTime);
+        window.location.reload(false);
+        }
+        catch(err)
+        {
+            alert("enter valid details");
+        }
     }
+   
     return(
         <>
-        <table align="center">
+        <table align="center" className="table">
+            <tr>
+                <th>Register Number</th>
+                <td><input className="input1" type="text" id="regd1" name="regd1" onChange={(e)=>setregd(e.target.value)} ></input></td>
+            </tr>
             <tr>
                 <th>Book Name</th>
-                <td><input type="text" id="bname" name="bname" onChange={(e)=>setbname(e.target.value)} ></input></td>
+                <td><input className="input1"  type="text"  id="bname" name="bname" onChange={(e)=>setbname(e.target.value)} ></input></td>
             </tr>
             <tr>
                 <th>Book Code</th>
-                <td><input type="text" id="code" name="code" onChange={(e)=>setcode(e.target.value)} ></input></td>
+                <td><input className="input1" type="text" id="code" name="code" onChange={(e)=>setcode(e.target.value)} ></input></td>
             </tr>
             <tr>
-            <th>Duration</th>
-            <td><input type="radio" id="1"  name="duration" onChange={(e)=>setduration('1')}/><label for="1">1</label>
-            <input type="radio" id="3"  name="duration" onChange={(e)=>setduration('3')}/><label for="3">3</label></td>
+                <th>Time and Date</th>
+                <td><input className="input1" type="date"  id="date1" name="date1" onChange={(e)=>setdate(e.target.value)} ></input>{showTime}</td>
             </tr>
             <tr>
-                <th>Starting date</th>
-                <td><input type="date" id="pdate" name="pdate" onChange={(e)=>setpdate(e.target.value)} ></input></td>
-            </tr>
-            <tr>
-                <th>Ending date</th>
-                <td><input type="date" id="ldate" name="ldate" onChange={(e)=>setldate(e.target.value)} ></input></td>
-            </tr>
-            <tr>
-                <td colSpan="2" align="center"><button onClick={enter}>Enter</button></td>
+                <td colSpan="3" align="center"><button className="enter"  onClick={enter}>Enter</button></td>
             </tr>
         </table>
         </>
