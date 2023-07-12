@@ -9,7 +9,12 @@ const Screen =()=>{
         <>
         <Header/>
         <br/>
+<<<<<<< HEAD
         <div className="screen"><Bookreg/></div><br/><br/>
+=======
+        <div  className="space">
+        <div className="screen1"><Bookreg/></div>
+>>>>>>> 2146dca17c826f0806047ed8249cd7824394a4a3
         <div className="screen"><Bdisplay/></div>
         </>
     )

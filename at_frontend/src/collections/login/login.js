@@ -11,6 +11,10 @@ const Log=()=>
     {
         nav("/screen");
     }
+    const studetail=async()=>
+    {
+        nav("/details");
+    }
     return(
         <>
         <div className="log">
@@ -19,6 +23,7 @@ const Log=()=>
             <div>
                 <button className="libent" onClick={Sturegi}><b>Student register</b></button>
                 <button className="libent" onClick={libbooks}><b>Library books</b></button>
+                <button className="libent" onClick={studetail}><b>Student details</b></button>
             </div>
         </div>
         </>
