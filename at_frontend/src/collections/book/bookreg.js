@@ -15,8 +15,17 @@ const Bookreg= () => {
         + ":" + date.getSeconds();
     const enter=async()=>{
         try{
+        const data1=await axios.get("http://localhost:4000/find/"+regd)
+        if(data1.data)
+        {
         const data=await axios.post("http://localhost:4000/enter/"+regd+"/"+bname+"/"+code+"/"+date1+"/"+showTime);
         window.location.reload(false);
+        }
+        else
+        {
+            alert("invalid register number");
+            window.location.reload(false);
+        }
         }
         catch(err)
         {

@@ -19,11 +19,12 @@ const Sdisplay= () => {
             data.map((item)=>{ 
                 <table className="table1">
                     <tr>
+                    <td>{item.name}</td>
                     <td>{item.regd}</td>
-                    <td>{item.bname}</td>
-                     <td>{item.code}</td>
-                     <td>{item.date}</td>
-                    <td >{item.time}</td>
+                     <td>{item.year}</td>
+                     <td>{item.section}</td>
+                    <td >{item.email}</td>
+                    <td>{item.phno}</td>
                     </tr>
                     <br/>
                     </table>

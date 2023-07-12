@@ -1,6 +1,6 @@
-import express from 'express'
-import {db,connectToDB} from "./db.js";
 import cors from 'cors';
+import express from 'express';
+import { connectToDB, db } from "./db.js";
 const app = express()
 app.use(cors())
 app.use(express.json())
@@ -24,7 +24,7 @@ app.get('/check2/:phno',async(req,res)=>{
     res.json(details);
 })
 app.get('/detail/:regd',async(req,res)=>{
-    const details=await db.collection('signup').find({regd:req.params.regd}).toArray()
+    const details=await db.collection('signup').findOne({regd:req.params.regd})
     res.json(details);
 })
 app.post('/enter/:regd/:bname/:code/:date1/:showTime',async(req,res)=>{
@@ -33,6 +33,10 @@ app.post('/enter/:regd/:bname/:code/:date1/:showTime',async(req,res)=>{
 })
 app.get('/screen/',async(req,res)=>{
     const details=await db.collection('details').find({}).toArray()
+    res.json(details);
+})
+app.get('/find/:regd',async(req,res)=>{
+    const details=await db.collection('signup').findOne({regd:req.params.regd})
     res.json(details);
 })
 connectToDB(()=>{
