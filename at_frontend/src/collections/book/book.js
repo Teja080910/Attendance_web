@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
 const Book= () => {
-    const regd=localStorage.regd;
+    const regd1=localStorage.regd;
     const[data,setData]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:4000/details/'+regd)
+        axios.get('http://localhost:4000/details/'+regd1)
         .then((responce)=>{   
             setData(responce.data);
         })
