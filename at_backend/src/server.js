@@ -40,7 +40,7 @@ app.get('/find/:regd',async(req,res)=>{
     res.json(details);
 })
 app.get('/find1/:regd',async(req,res)=>{
-    const details=await db.collection('signup').findOne({regd:req.params.regd})
+    const details=await db.collection('signup').findOne({regd:req.params.regd}).toArray()
     res.json(details);
 })
 app.get('/details/:regd',async(req,res)=>{
