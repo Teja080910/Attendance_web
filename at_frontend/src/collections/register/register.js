@@ -13,6 +13,7 @@ const Register=()=>{
     const[email,SetEmail]=useState("");
     const[phno,SetPhno]=useState("");
     const handleclick =async()=>{
+        try{
         const  responce1 = await axios.get("http://localhost:4000/check1/"+email);
         const  responce2 = await axios.get("http://localhost:4000/check2/"+phno);
         if(responce1.data)
@@ -29,6 +30,11 @@ const Register=()=>{
         alert("register successfully");
         nav('/')
         }
+    }
+    catch(err)
+    {
+        alert("Fill the details");
+    }
     }
     return(
         <div className="log1">

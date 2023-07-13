@@ -7,7 +7,7 @@ const Screen =()=>{
         <>
         <Header/>
         <br/>
-        <div className="screen"><Bookreg/></div><br/><br/>
+        {/* <div className="screen"><Bookreg/></div><br/><br/> */}
         <div  className="space">
         <div className="screen1"><Bookreg/></div>
         <div className="screen"><Bdisplay/></div>

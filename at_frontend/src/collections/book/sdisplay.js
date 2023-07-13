@@ -5,6 +5,8 @@ import Book from "./book";
 const Sdisplay= () => {
     const[regd,Setregd]=useState("");
     const[data,setData]=useState([]);
+    const Search =async()=>{
+        localStorage.regd=regd;
     useEffect(()=>{
         axios.get('http://localhost:4000/detail/'+regd)
         .then((responce)=>{   
@@ -14,9 +16,9 @@ const Sdisplay= () => {
             console.log(err);
         }
     )},[])
-    const Search =async()=>{
-        localStorage.regd=regd;
-        window.location.reload(false);
+ 
+        // localStorage.regd=regd;
+        //window.location.reload(false);
     }
     return(
         <>
@@ -25,7 +27,7 @@ const Sdisplay= () => {
         <br/> <input type="text" className="width" id="regd" name="regd" placeholder="Register Number" onChange={(e)=>Setregd(e.target.value)}/>
         <button className="height" onclick={Search}>search</button>
         </div>
-        <div className="test">
+        <div className="test1">
         {
             data.map((item)=>{ 
              return(
@@ -46,7 +48,9 @@ const Sdisplay= () => {
             })
         }
         </div>
+        <div className="test2">
         <Book/>
+        </div>
         </>
     );
 }
