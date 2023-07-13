@@ -23,7 +23,7 @@ app.get('/check2/:phno',async(req,res)=>{
     const details=await db.collection('signup').findOne({phno:req.params.phno});
     res.json(details);
 })
-app.get('/detail/:regd',async(req,res)=>{
+app.get('/studata/',async(req,res)=>{
     const detail=await db.collection('signup').find({}).toArray()
     res.json(detail);
 })
@@ -39,7 +39,7 @@ app.get('/find/:regd',async(req,res)=>{
     const details=await db.collection('signup').findOne({regd:req.params.regd})
     res.json(details);
 })
-app.get('/details/:regd1',async(req,res)=>{
+app.get('/details/',async(req,res)=>{
     const data1=await db.collection('details').find({}).toArray()
     res.json(data1)
 })

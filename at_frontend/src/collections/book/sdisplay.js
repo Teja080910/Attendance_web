@@ -4,7 +4,7 @@ const Sdisplay= () => {
     const[data,setData]=useState([]);
    const regd=localStorage.regd;
     useEffect(()=>{
-        axios.get('http://localhost:4000/detail/'+regd)
+        axios.get('http://localhost:4000/studata/'+regd)
         .then((responce)=>{   
             setData(responce.data);
         })
