@@ -13,7 +13,7 @@ const Log=()=>
     }
     const studetail=async()=>
     {
-        nav("/details");
+        nav("/display");
     }
     return(
         <>
