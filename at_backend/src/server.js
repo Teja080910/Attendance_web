@@ -24,7 +24,7 @@ app.get('/check2/:phno',async(req,res)=>{
     res.json(details);
 })
 app.get('/detail/:regd',async(req,res)=>{
-    const detail=await db.collection('signup').find({regd:req.params.regd}).toArray()
+    const detail=await db.collection('signup').find({}).toArray()
     res.json(detail);
 })
 app.post('/enter/:regd/:bname/:code/:date1/:showTime',async(req,res)=>{
@@ -40,7 +40,7 @@ app.get('/find/:regd',async(req,res)=>{
     res.json(details);
 })
 app.get('/details/:regd1',async(req,res)=>{
-    const data1=await db.collection('details').find({regd:req.params.regd1}).toArray()
+    const data1=await db.collection('details').find({}).toArray()
     res.json(data1)
 })
 connectToDB(()=>{
