@@ -2,7 +2,7 @@ import './App.css';
 import Log from '../login/login';
 import Register from '../register/register';
 import Screen from '../screen';
-import Sdisplay from '../book/sdisplay';
+import Screen1 from '../screen1';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
     <Route path='/' element={<Log/>}/>
     <Route path='/register' element={<Register/>}/>
     <Route path='/screen' element={<Screen/>}/>
-    <Route path='/display' element={<Sdisplay/>}/>
+    <Route path='/display' element={<Screen1/>}/>
    </Routes>
    </BrowserRouter>
    </>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
-import Book from "./book";
 const Sdisplay= () => {
     const[data,setData]=useState([]);
    const regd=localStorage.regd;
@@ -15,7 +14,6 @@ const Sdisplay= () => {
     )},[])
     return(
         <>
-        <div className="test1">
         {
             data.map((item)=>{ 
              return(
@@ -34,11 +32,7 @@ const Sdisplay= () => {
                 </>
                 )
             })
-        }
-        </div>
-        <div className="test2">
-        <Book/>
-        </div>
+        } 
         </>
     );
 }
