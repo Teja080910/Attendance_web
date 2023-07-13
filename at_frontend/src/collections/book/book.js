@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
 const Book= () => {
-    const[data,setData]=useState([]);
     const regd=localStorage.regd;
+    const[data,setData]=useState([]);
     useEffect(()=>{
         axios.get('http://localhost:4000/details/'+regd)
         .then((responce)=>{   

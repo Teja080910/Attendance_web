@@ -5,8 +5,12 @@ import Book from "./book";
 const Sdisplay= () => {
     const[regd,Setregd]=useState("");
     const[data,setData]=useState([]);
-    const Search =async()=>{
-        localStorage.regd=regd;
+    localStorage.regd=regd;
+    const Search =async(res)=>{
+        const data=await axios.get("http://localhost:4000/find1/"+regd)
+        res.send(data);
+        window.location.reload(false);
+    }
     useEffect(()=>{
         axios.get('http://localhost:4000/detail/'+regd)
         .then((responce)=>{   
@@ -16,10 +20,6 @@ const Sdisplay= () => {
             console.log(err);
         }
     )},[])
- 
-        // localStorage.regd=regd;
-        //window.location.reload(false);
-    }
     return(
         <>
         <Header/>

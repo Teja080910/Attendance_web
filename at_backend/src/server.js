@@ -39,8 +39,13 @@ app.get('/find/:regd',async(req,res)=>{
     const details=await db.collection('signup').findOne({regd:req.params.regd})
     res.json(details);
 })
+app.get('/find1/:regd',async(req,res)=>{
+    const details=await db.collection('signup').findOne({regd:req.params.regd})
+    res.json(details);
+})
 app.get('/details/:regd',async(req,res)=>{
     const data1=await db.collection('details').find({regd:req.params.regd}).toArray()
+    res.json(data1)
 })
 connectToDB(()=>{
     app.listen(4000,()=>{
