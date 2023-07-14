@@ -4,7 +4,7 @@ import Bdisplay from "./book/bdisplay";
 import Bookreg from "./book/bookreg";
 const Screen =()=>{
     return(
-        <>
+        <div className="log1">
         <Header/>
         <br/>
         {/* <div className="screen"><Bookreg/></div><br/><br/> */}
@@ -12,7 +12,7 @@ const Screen =()=>{
         <div className="screen1"><Bookreg/></div>
         <div className="screen"><Bdisplay/></div>
         </div>
-        </>
+        </div>
     )
 }
 export default Screen;

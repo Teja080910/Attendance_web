@@ -51,8 +51,9 @@ const Bookreg= () => {
             </tr>
             <tr>
                 <th>Time and Date</th>
-                <td><input className="input1" type="date"  id="date1" name="date1" onChange={(e)=>setdate(e.target.value)} ></input>{showTime}</td>
+                <td><input className="input1" type="date"  id="date1" name="date1" onChange={(e)=>setdate(e.target.value)} ></input></td><td>{showTime}</td>
             </tr>
+            <br/>
             <tr>
                 <td colSpan="3" align="center"><button className="enter"  onClick={enter}>Enter</button></td>
             </tr>
