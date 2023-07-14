@@ -4,10 +4,10 @@ const Search=()=>{
     const[regd,Setregd]=useState("");
     localStorage.regd=regd;
     const search3 =async()=>{
-        const find=await axios.get("http://localhost:4000/find1/"+regd);
-        if(find.data)
+        const  responce3 = await axios.get("http://localhost:4000/find1/"+regd);
+        if(responce3.data)
         {
-        window.location.reload(false);
+             window.location.reload(false);
         }
         else{
             alert("not registered");
