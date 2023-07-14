@@ -28,8 +28,8 @@ app.get('/studata/:regd',async(req,res)=>{
     res.json(detail);
 })
 app.get('/find1/:regd',async(req,res)=>{
-    const details=await db.collection('signup').findOne({regd:req.params.regd});
-    res.json(details);
+    const details3=await db.collection('signup').findOne({regd:req.params.regd});
+    res.json(details3);
 })
 app.post('/enter/:regd/:bname/:code/:date1/:showTime',async(req,res)=>{
     const details1=await db.collection('details').insertOne({regd:req.params.regd,bname:req.params.bname,code:req.params.code,date:req.params.date1,time:req.params.showTime});
