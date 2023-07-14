@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios"; 
 const Sdisplay= () => {
     const[data,setData]=useState([]);
-   const regd=localStorage.regd;
+   const regd=localStorage.regdno;
     useEffect(()=>{
         axios.get('http://localhost:4000/studata/'+regd)
         .then((responce)=>{   
@@ -14,7 +14,7 @@ const Sdisplay= () => {
     )},[])
     return(
         <>
-        <h1>{regd}</h1>
+        {/* <h1>{regd}</h1> */}
         {
             data.map((item)=>{ 
              return(

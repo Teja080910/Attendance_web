@@ -8,10 +8,10 @@ const Screen1 =()=>{
         <>
         <Header/>
         <Search/>
-        <div  className="space">
+        {/* <div  className="space">
         <div className="screen12"><Sdisplay/></div>
         <div className="screen2"><Book/></div>
-        </div>
+        </div> */}
         </>
     )
 }

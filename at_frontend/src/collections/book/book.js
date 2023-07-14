@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
 const Book= () => {
-    const regd=localStorage.regd;
+    const regd=localStorage.regdno;
     const[data,setData]=useState([]);
     useEffect(()=>{
         axios.get('http://localhost:4000/details/'+regd)
@@ -14,6 +14,7 @@ const Book= () => {
     )},[])
     return(
         <>
+        <h1>{regd}</h1>
         {  
             data.map((item)=>{ 
                 return(
