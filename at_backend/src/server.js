@@ -43,8 +43,8 @@ app.get('/find/:regd',async(req,res)=>{
     const details=await db.collection('signup').findOne({regd:req.params.regd})
     res.json(details);
 })
-app.get('/details/:regd1',async(req,res)=>{
-    const data1=await db.collection('details').find({regd:req.params.regd1}).toArray()
+app.get('/details/:regd',async(req,res)=>{
+    const data1=await db.collection('details').find({regd:req.params.regd}).toArray()
     res.json(data1)
 })
 connectToDB(()=>{

@@ -6,11 +6,11 @@ const Search=()=>{
     const[regd,Setregd]=useState(""); 
     localStorage.regd=regd;
     const Search3 =async()=>{
-        const  responce3 = await axios.get("http://localhost:4000/find1/"+regd);
-        if(responce3.data)
+        const data2=await axios.get("http://localhost:4000/find1/"+regd)
+        if(data2.data)
         {
             nav('/screen');
-             window.location.reload(false);
+            window.location.reload(false);
             
         }
         else

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
 const Book= () => {
-    const regd1=localStorage.regd;
+    const regd=localStorage.regd;
     const[data,setData]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:4000/details/'+regd1)
+        axios.get('http://localhost:4000/details/'+regd)
         .then((responce)=>{   
             setData(responce.data);
         })
@@ -14,7 +14,6 @@ const Book= () => {
     )},[])
     return(
         <>
-        <h1>{regd1}</h1>
         {  
             data.map((item)=>{ 
                 return(
