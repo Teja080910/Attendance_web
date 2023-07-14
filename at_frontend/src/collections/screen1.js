@@ -7,11 +7,10 @@ const Screen1 =()=>{
     return(
         <>
         <Header/>
-        <br/>
-        <div className="screen"><Search/></div><br/><br/>
+        <Search/>
         <div  className="space">
-        <div className="screen1"><Sdisplay/></div>
-        <div className="screen"><Book/></div>
+        <div className="screen12"><Sdisplay/></div>
+        <div className="screen2"><Book/></div>
         </div>
         </>
     )

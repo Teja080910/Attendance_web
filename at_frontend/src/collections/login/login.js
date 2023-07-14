@@ -13,7 +13,7 @@ const Log=()=>
     }
     const studetail=async()=>
     {
-        nav("/display");
+        nav("/screen1");
     }
     return(
         <>

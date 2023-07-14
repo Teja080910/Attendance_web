@@ -12,7 +12,7 @@ function App() {
     <Route path='/' element={<Log/>}/>
     <Route path='/register' element={<Register/>}/>
     <Route path='/screen' element={<Screen/>}/>
-    <Route path='/display' element={<Screen1/>}/>
+    <Route path='/screen1' element={<Screen1/>}/>
    </Routes>
    </BrowserRouter>
    </>

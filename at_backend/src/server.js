@@ -23,9 +23,13 @@ app.get('/check2/:phno',async(req,res)=>{
     const details=await db.collection('signup').findOne({phno:req.params.phno});
     res.json(details);
 })
-app.get('/studata/',async(req,res)=>{
-    const detail=await db.collection('signup').find({}).toArray()
+app.get('/studata/:regd',async(req,res)=>{
+    const detail=await db.collection('signup').find({regd:req.params.regd}).toArray()
     res.json(detail);
+})
+app.get('/find1/:regd',async(req,res)=>{
+    const details=await db.collection('signup').findOne({regd:req.params.regd});
+    res.json(details);
 })
 app.post('/enter/:regd/:bname/:code/:date1/:showTime',async(req,res)=>{
     const details1=await db.collection('details').insertOne({regd:req.params.regd,bname:req.params.bname,code:req.params.code,date:req.params.date1,time:req.params.showTime});
@@ -39,8 +43,8 @@ app.get('/find/:regd',async(req,res)=>{
     const details=await db.collection('signup').findOne({regd:req.params.regd})
     res.json(details);
 })
-app.get('/details/',async(req,res)=>{
-    const data1=await db.collection('details').find({}).toArray()
+app.get('/details/:regd1',async(req,res)=>{
+    const data1=await db.collection('details').find({regd:req.params.regd1}).toArray()
     res.json(data1)
 })
 connectToDB(()=>{

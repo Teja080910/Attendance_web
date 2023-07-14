@@ -1,9 +1,17 @@
 import React , {useState} from "react";
+import axios from "axios";
 const Search=()=>{
     const[regd,Setregd]=useState("");
     localStorage.regd=regd;
     const search3 =async()=>{
+        const find=await axios.get("http://localhost:4000/find1/"+regd);
+        if(find.data)
+        {
         window.location.reload(false);
+        }
+        else{
+            alert("not registered");
+        }
     }
     return(
     <>

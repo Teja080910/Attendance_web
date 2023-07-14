@@ -81,12 +81,23 @@
 {
   margin-left: 10px;
   width:50%;
-  height:62vh;
+  height:61vh;
   overflow-y: scroll;
 }
 .screen1{
   width:50%;
-  height:62vh;
+  height:61vh;
+}
+.screen2
+{
+  margin-left: 10px;
+  width:50%;
+  height:55vh;
+  overflow-y: scroll;
+}
+.screen12{
+  width:50%;
+  height:55vh;
 }
 .color{
   width: 10%;
@@ -116,6 +127,9 @@
 }
 .space{
   display: flex;
+}
+.fixed{
+  height: 100vh;
 }
 
 
