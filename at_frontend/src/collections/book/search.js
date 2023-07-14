@@ -1,13 +1,17 @@
 import React , {useState} from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Search=()=>{
+    const nav=useNavigate();
     const[regd,Setregd]=useState(""); 
     localStorage.regd=regd;
     const Search3 =async()=>{
         const  responce3 = await axios.get("http://localhost:4000/find1/"+regd);
         if(responce3.data)
         {
+            nav('/screen');
              window.location.reload(false);
+            
         }
         else
         {
