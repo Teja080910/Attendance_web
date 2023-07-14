@@ -14,7 +14,8 @@ const Book= () => {
     )},[])
     return(
         <>
-        {
+        <h1>{regd1}</h1>
+        {  
             data.map((item)=>{ 
                 return(
                <>

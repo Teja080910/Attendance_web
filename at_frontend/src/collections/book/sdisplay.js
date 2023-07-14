@@ -14,6 +14,7 @@ const Sdisplay= () => {
     )},[])
     return(
         <>
+        <h1>{regd}</h1>
         {
             data.map((item)=>{ 
              return(
